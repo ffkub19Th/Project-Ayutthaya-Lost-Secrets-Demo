@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>ปริศนากู้กรุงศรี</title>
+<title>ความลับกรุงศรี</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -394,6 +394,56 @@ body{background:#0d0703;background-image:none}
 
 /* ----- boards sit inside the mockup's own frame (no extra box) ----- */
 .panel{background:#2a160b;border:0;box-shadow:none;border-radius:4px}
+
+/* ----- energy bar (drawn over the mockup's 10/10 bar) ----- */
+.mbar{position:absolute;display:flex;align-items:center;justify-content:center;background:#3a0f0a;border-radius:5px;overflow:hidden;pointer-events:none;box-shadow:inset 0 0 0 2px #1a0a05}
+.mbar i{position:absolute;left:0;top:0;bottom:0;width:100%;background:linear-gradient(#ff6a50,#c8281c 55%,#8e1710);transition:width .4s}
+.mbar b{position:relative;font:600 14px var(--f-head);color:#fff;text-shadow:0 1px 0 #000a}
+
+/* ----- levels 1-4: the picture's own controls ----- */
+.nop .lm{display:none}
+.opat{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#3a2412;font:500 1em var(--f-body);line-height:1.3;overflow:hidden;pointer-events:none;border-radius:4px}
+.opat b{font:600 1.05em var(--f-head)}
+.opat span{display:block}
+.l1c-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.5em;height:62%}
+.l1c{display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:.3em .2em;background:linear-gradient(#f2dfae,#d9bd80);border:3px solid #8a6a35;color:#3a2412;font-size:.92em;border-radius:4px}
+.l1c b{font:600 1em var(--f-head)}.l1c em{font-style:normal;font-size:.9em}.l1c small{color:#7a5a30;font-size:.85em}
+.l1c .mi{line-height:0}.l1c .monimg{width:4.4em;height:4.4em}
+.l1c.sel{border-color:#fff;box-shadow:0 0 0 3px #b9502a;background:linear-gradient(#fff4d0,#ecd9a0)}
+.l1c.ok{background:linear-gradient(#d4ecbd,#b4d595);border-color:#2f8a43}
+.l1hint{text-align:center;color:#e8d3a0;font-size:.85em;margin:.3em 0}
+.l1e-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.5em}
+.l1e{padding:.35em;background:linear-gradient(#5a3820,#341c0d);border:2px solid var(--gold-d);color:var(--gold2);font:500 1em var(--f-head);border-radius:4px}
+.l1e.sel{background:linear-gradient(#e3b657,#a8741e);color:#2a1408;border-color:#fff}
+.l1e:disabled{opacity:.35}
+.l2card{position:absolute;line-height:0;pointer-events:none}.l2card img{width:100%;height:100%;image-rendering:auto}
+.l2note{font-size:.78em;font-weight:500}
+.l2res{align-items:flex-end;justify-content:center;padding-right:.5em}.l2res b{font:600 1.7em var(--f-head);color:#4a2a10;letter-spacing:.1em}
+.l2step{position:absolute;display:flex;align-items:center;justify-content:center;pointer-events:none;color:#ffe9b0;font:500 .85em var(--f-head)}
+.l2del span{color:#fff0c8;font:500 .95em var(--f-head)}
+.slot.filled img,.slot img{width:100%;height:100%;display:block;object-fit:cover}
+.slot.filled{background:#e9d29a}
+.rvtag span{display:block;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#fffaf0;border:2px solid #3a2412;color:#3a2412;font:500 .9em var(--f-head);border-radius:4px;box-shadow:0 2px 0 #0006}
+.rvtag.good span{background:#d6f0c4;border-color:#2f8a43}
+.tok.sel{outline:4px solid #fff;outline-offset:-4px;background:#ffffff30}
+.dim{position:absolute;background:rgba(14,8,4,.55);pointer-events:none;border-radius:8px}
+.l3prog b{font:600 1.15em var(--f-head);color:#fff0c8}
+.l4evt{align-items:flex-start;justify-content:flex-start;text-align:left;padding:.3em .6em;font-size:.82em;color:#3a2412}
+.l4evt b{font-size:.95em;color:#7a3a12}
+.l4cash b{font:600 1.2em var(--f-head);color:#fff0c8}
+.l4bar{position:absolute;display:flex;align-items:center;justify-content:space-between;gap:.3em;padding:0 .4em;border-radius:6px}
+.l4bar span{font:600 .95em var(--f-head)}.l4bar b{font:600 1.15em var(--f-head);color:#fff;min-width:1.4em;text-align:center}
+.l4bar .cb{width:1.7em;height:1.7em;border-radius:5px;background:linear-gradient(#e3b657,#a8741e);color:#2a1408;font:700 1.1em var(--f-head);line-height:1;border:2px solid #fff3}
+.l4bar .cb:disabled{opacity:.4}
+.l1c-row{height:54%}
+.L1 .npc p,.L2 .npc p,.L3 .npc p,.L4 .npc p{font-size:.9em;line-height:1.3}
+.L3 .opat:not(.l3prog){font-size:.68em;align-items:flex-start;justify-content:center;text-align:left;padding:.2em .6em;line-height:1.25}
+.L3 .opat b{font-size:1em}
+.L1 .panel{display:flex;flex-direction:column;gap:.2em}
+.L1 .l1c-row{height:auto;flex:1;min-height:0}
+.L1 .l1c{min-height:0;overflow:hidden;font-size:.85em}.L1 .l1c .monimg{width:3.2em;height:3.2em}
+.L1 .l1hint{margin:0;flex:none;font-size:.78em}
+.L1 .l1e{padding:.25em}
 
 </style>
 <div id="app"></div><div id="fader"></div>
@@ -861,10 +911,10 @@ const TOP_A={back:[8,8,95,76],gear:[1203,8,65,64],th:[1148,76,120,36],hud:[995,1
 const TOP_B={back:[8,8,80,70],gear:[1210,8,62,62],th:[1158,70,112,40],hud:[1020,16,172,40]};
 const FR=[[12,583,134,127],[16,692,144,130],[13,582,130,125],[12,581,138,127]];
 const LAYOUT=[
- Object.assign({f:FR[0],p:[705,365,535,232],n:[160,602,378,94],pri:[1090,618,178,82],hint:[703,625,177,70],know:[895,625,180,70],patch:[[772,655,88,34,'hint']],noph:1},TOP_A),
- Object.assign({f:FR[1],p:[283,228,975,462],n:[175,708,452,108],pri:[1103,730,159,105],hint:[695,745,190,80],know:[898,745,192,80],patch:[[765,775,88,36,'hint']]},TOP_A),
- Object.assign({f:FR[2],p:[450,192,810,400],pk:5,n:[158,598,345,96],pri:[930,612,338,93],noph:1},TOP_A),
- Object.assign({f:FR[3],p:[590,195,640,390],n:[160,595,382,98],pri:[990,615,278,90],hint:[625,620,225,80],noph:1},TOP_A),
+ Object.assign({bar:[1030,24,150,24],f:FR[0],p:[705,365,535,232],n:[160,602,378,94],pri:[1090,618,178,82],hint:[703,625,177,70],know:[895,625,180,70],patch:[[772,655,88,34,'hint']],noph:1},TOP_A),
+ Object.assign({bar:[1025,21,150,24],f:FR[1],p:[283,228,975,462],n:[175,708,452,108],pri:[1103,730,159,105],hint:[695,745,190,80],know:[898,745,192,80],patch:[[765,775,88,36,'hint']]},TOP_A),
+ Object.assign({bar:[1045,22,132,24],f:FR[2],p:[450,192,810,400],pk:5,n:[158,598,345,96],pri:[930,612,338,93],noph:1},TOP_A),
+ Object.assign({bar:[1035,22,132,24],f:FR[3],p:[590,195,640,390],n:[160,595,382,98],pri:[990,615,278,90],hint:[625,620,225,80],noph:1},TOP_A),
  Object.assign({p:[590,195,650,390],n:[160,595,382,98],pri:[1025,615,243,90],hint:[580,620,190,80],know:[785,620,225,80],patch:[[655,652,90,34,'hint']],noph:1},TOP_A),
  Object.assign({p:[390,425,865,222],n:[125,548,258,130],pri:[1085,640,183,66],hint:[740,650,160,56],know:[905,650,170,56],noph:1},TOP_B),
  Object.assign({p:[312,115,943,448],n:[138,572,268,122],pri:[1090,628,178,85],hint:[788,655,135,60],know:[935,655,145,60]},TOP_B),
@@ -976,7 +1026,7 @@ function startLevel(i){
   const L=CUR={i,D,mist:0,hints:0,solved:false,t0:Date.now(),st:{},hintOpen:false,secretShown:false};
   const LY=LAYOUT[i];
   const root=el('div','lv L'+D.n+(D.special?' sp':'')+(LY.noph?' noph':''));
-  const [IW,IH]=IMGSIZE[i];const px=(v,t)=>(v/t*100).toFixed(3)+'%';
+  const [IW,IH]=IMGSIZE[i];L.IW=IW;L.IH=IH;const px=(v,t)=>(v/t*100).toFixed(3)+'%';
   const setR=(k,r)=>{root.style.setProperty('--'+k+'x',px(r[0],IW));root.style.setProperty('--'+k+'y',px(r[1],IH));root.style.setProperty('--'+k+'w',px(r[2],IW));root.style.setProperty('--'+k+'h',px(r[3],IH))};
   root.style.setProperty('--ar',IW+'/'+IH);root.style.setProperty('--arn',(IW/IH).toFixed(4));{const k=LY.pk==null?10:LY.pk,q=LY.p;setR('p',[q[0]+k,q[1]+k,q[2]-2*k,q[3]-2*k])}setR('n',LY.n);
   const hs=(k,r,label)=>r?`<button class="hs" id="hs-${k}" aria-label="${label}" style="left:${px(r[0],IW)};top:${px(r[1],IH)};width:${px(r[2],IW)};height:${px(r[3],IH)}"></button>`:'';
@@ -986,18 +1036,25 @@ function startLevel(i){
    <section class="lm"><div class="panel" id="pz"></div></section>
    <footer class="lf"><div class="npc"><span class="face"></span><div><b>${D.npc}</b><p id="say"></p></div></div><div class="fb"><button class="pxb" id="hintB">คำใบ้ 0/3</button><button class="pxb" id="knowB">ความรู้เพิ่มเติม</button><button class="pxb gold" id="goB" hidden></button></div></footer>
    <div class="ovl">${LY.f?`<div class="fpt" style="left:${px(LY.f[0],IW)};top:${px(LY.f[1],IH)};width:${px(LY.f[2],IW)};height:${px(LY.f[3],IH)}"><img src="${FACES[0]}" alt="ขุนอักษร"></div>`:''}${hs('back',LY.back,'กลับแผนที่')}${hs('gear',LY.gear,'ตั้งค่า')}${hs('th',LY.th,'คำใบ้')}${hs('hint',LY.hint,'คำใบ้')}${hs('know',LY.know,'ความรู้เพิ่มเติม')}${hs('pri',LY.pri,'ดำเนินการ')}${LY.lamp?hs('lamp',LY.lamp,'เพิ่มแสง'):''}${pats}
-    <div class="hudp" style="left:${px(LY.hud[0]-150,IW)};top:${px(LY.hud[1],IH)};width:${px(LY.hud[2]+150,IW)};height:${px(LY.hud[3],IH)}"><span>พลาด <b class="mcv">0</b></span><span>คำใบ้ <b class="hcv">0</b>/3</span><button id="hudK">ความรู้</button></div></div>`;
+    ${LY.bar?`<div class="mbar" style="left:${px(LY.bar[0],IW)};top:${px(LY.bar[1],IH)};width:${px(LY.bar[2],IW)};height:${px(LY.bar[3],IH)}"><i></i><b>10/10</b></div>`:''}</div>`;
   screen(fullWrap(root,IMGDATA[i],STAGE_W,Math.round(STAGE_W*IH/IW)));
   L.drawBG=()=>{};
   {const fi=new Image();fi.src=FACES[0];fi.alt='ขุนอักษร';$('.face',root).appendChild(fi)}
   L.root=root;L.panel=$('#pz',root);
   L.say=t=>{$('#say',root).textContent=t};
   L.bubble=()=>{};
-  L.syncMist=()=>$$('.mcv',root).forEach(e=>e.textContent=L.mist);
+  L.lives=10;
+  L.syncMist=()=>{$$('.mcv',root).forEach(e=>e.textContent=L.mist);const b=$('.mbar',root);if(b){$('i',b).style.width=(L.lives*10)+'%';$('b',b).textContent=L.lives+'/10'}};
+  L.lose=()=>{if(L.dead||L.solved)return;L.dead=true;Snd.sfx('bad');
+    const M=modal({title:'พลังงานหมดแล้ว',cls:'narrow',closable:false});
+    M.body.innerHTML=`<p class="lead">ขุนอักษรส่ายหน้าเบาๆ "ไม่เป็นไร เจ้าลองอ่านเรื่องราวทบทวนอีกครั้งแล้วเริ่มใหม่ได้เสมอ"</p><div class="brow col"><button class="pxb gold" id="lr">เริ่มด่านใหม่</button><button class="pxb" id="lk">อ่านความรู้ทบทวน</button><button class="pxb" id="lb">กลับแผนที่</button></div>`;
+    $('#lr',M.body).onclick=()=>{M.close();startLevel(i)};
+    $('#lk',M.body).onclick=async()=>{M.close();await studyModal(i,{review:true});startLevel(i)};
+    $('#lb',M.body).onclick=()=>{M.close();fadeTo(showMap)}};
   L.syncHints=()=>{$$('.hcv',root).forEach(e=>e.textContent=L.hints);$$('.pat[data-k="hint"]',root).forEach(e=>e.textContent=L.hints+' / 3')};
   L.patch=(k,t)=>$$('.pat[data-k="'+k+'"]',root).forEach(e=>e.textContent=t);
   L.face=(k,ms=2200)=>{const set=n=>$$('.fpt img,.face img',root).forEach(e=>e.src=FACES[n]);set(k);clearTimeout(L._ft);if(ms)L._ft=setTimeout(()=>set(0),ms)};
-  L.err=(msg,say)=>{L.mist++;L.syncMist();L.face(1);Snd.sfx('bad');L.panel.classList.remove('shake');void L.panel.offsetWidth;L.panel.classList.add('shake');if(say!==false)L.say(msg)};
+  L.err=(msg,say,cost)=>{if(L.dead)return;L.mist++;L.lives=Math.max(0,L.lives-(cost==null?2:cost));L.syncMist();L.face(1);if(L.lives<=0)setTimeout(()=>L.lose(),700);Snd.sfx('bad');L.panel.classList.remove('shake');void L.panel.offsetWidth;L.panel.classList.add('shake');if(say!==false)L.say(msg)};
   L.good=msg=>{Snd.sfx('ok');L.face(4);if(msg)L.say(msg)};
   L.primary=(label,fn,dis)=>{const g=$('#goB',root);g.hidden=!label;g.textContent=label||'';g.disabled=!!dis;g.onclick=()=>{Snd.sfx('click');fn&&fn()}};
   L.update=()=>{refreshSecret()};
@@ -1023,7 +1080,7 @@ function startLevel(i){
   hsb('lamp',()=>{const l=$('#lampB',root);if(l&&!l.disabled)l.click();else L.say('ตะเกียงไม่มีแสงเพิ่มแล้ว')});
   hsb('gear',()=>{const M=modal({title:'ตั้งค่า',cls:'narrow'});const draw=()=>{M.body.innerHTML=soundRows()+`<div class="brow col"><button class="pxb" id="o2">อ่านความรู้ของด่านนี้</button><button class="pxb" id="o3">กลับแผนที่</button></div>`;bindSound(M,draw);
     $('#o2',M.body).onclick=()=>{M.close();studyModal(i,{review:true})};$('#o3',M.body).onclick=()=>{M.close();click('#bBack')}};draw()});
-  const hk=$('#hudK',root);if(hk)hk.onclick=()=>{Snd.sfx('click');studyModal(i,{review:true})};
+  
   const syncPri=()=>{const g=$('#goB',root),h=$('#hs-pri',root);if(h)h.classList.toggle('ready',!!g&&!g.hidden&&!g.disabled)};
   new MutationObserver(syncPri).observe($('#goB',root),{attributes:true,childList:true});
   // sample the mockup's own colours so patches and the speech text blend in
@@ -1033,6 +1090,7 @@ function startLevel(i){
   L.syncHints();
   // intro lines
   let k=0;L.say(D.intro[0]);L.bubble(D.intro.length>1?D.intro[1]:'');
+  if(typeof lvHelpers==='function')lvHelpers(L);
   P.mount(L);L.update();
   document.documentElement.style.scrollBehavior='auto'}
 function calcStars(L){return L.mist<=2&&L.hints<=1?3:L.mist<=6&&L.hints<=3?2:1}
@@ -1727,6 +1785,168 @@ PZ[9]={
       else{tried=true;if(chances>0){chances--;L.err('ยังไม่ถูกต้อง มีลิงก์ไปอ่านสรุปเนื้อหาได้ แล้วกลับมาตอบใหม่',true);showWhy=true;draw()}
         else{L.err('โอกาสแก้ตัวหมดแล้ว เฉลย: '+q.o[q.a],true);answered++;tried=false;showWhy=false;qi++;if(qi>=2){qi=0;step++}if(step>=4){fin=true;L.pct=Math.round(firstOk/total*100);draw();L.done(`ประกอบพระที่นั่งสำเร็จ ความแม่นยำ ${L.pct}%`);return}draw()}}};
     L.pct=0;L.primary('');draw()}};
+
+'use strict';
+/* ====== Levels 1-4 rebuilt on the supplied mockups: the picture's own buttons are the controls ====== */
+const SPC={};
+function spriteOf(L,r){const k=L.i+':'+r.join();if(SPC[k])return SPC[k];
+  const c=document.createElement('canvas');c.width=r[2];c.height=r[3];
+  try{const im=IMGE[L.i],s=im.naturalWidth/L.IW;c.getContext('2d').drawImage(im,r[0]*s,r[1]*s,r[2]*s,r[3]*s,0,0,r[2],r[3])}catch(e){}
+  return SPC[k]=c.toDataURL()}
+const CVC={};
+function colOf(L,r,mode){let cv=CVC[L.i];
+  try{if(!cv){cv=document.createElement('canvas');const im=IMGE[L.i];cv.width=im.naturalWidth;cv.height=im.naturalHeight;cv.getContext('2d').drawImage(im,0,0);CVC[L.i]=cv}
+    const g=cv.getContext('2d'),k=cv.width/L.IW,P=[];
+    for(let a=0;a<5;a++)for(let b=0;b<5;b++){const d=g.getImageData(Math.round((r[0]+3+(r[2]-6)*a/4)*k),Math.round((r[1]+3+(r[3]-6)*b/4)*k),1,1).data;P.push([d[0],d[1],d[2],d[0]+d[1]+d[2]])}
+    P.sort((p,q)=>p[3]-q[3]);const pick=mode==='light'?P.slice(-9):P.slice(0,9),m=pick[pick.length>>1];return `rgb(${m[0]},${m[1]},${m[2]})`}
+  catch(e){return mode==='light'?'#efd9a4':'#3a1f0e'}}
+const TH10=['๐','๑','๒','๓','๔','๕','๖','๗','๘','๙'];
+function lvHelpers(L){
+  L.rectCss=r=>`left:${(r[0]/L.IW*100).toFixed(3)}%;top:${(r[1]/L.IH*100).toFixed(3)}%;width:${(r[2]/L.IW*100).toFixed(3)}%;height:${(r[3]/L.IH*100).toFixed(3)}%`;
+  L.add=(cls,r,html,tag)=>{const e=document.createElement(tag||'div');e.className=cls;e.style.cssText=L.rectCss(r);if(html!=null)e.innerHTML=html;$('.ovl',L.root).appendChild(e);return e};
+  L.btn=(id,r,label,fn,cls)=>{const b=L.add('hs '+(cls||''),r,'','button');b.id='hs-'+id;b.setAttribute('aria-label',label);b.onclick=()=>{if(L.dead)return;Snd.sfx('click');fn()};return b};
+  L.patchT=(r,mode,html,cls)=>{const e=L.add('opat '+(cls||''),r,html);e.style.background=colOf(L,r,mode);return e};
+  L.hideBoard=()=>{L.root.classList.add('nop')}}
+
+/* ---------- 1 · three ruins, match each to an era ---------- */
+const ERAR=['พ.ศ. 1893–1991','พ.ศ. 1991–2231','พ.ศ. 2231–2310'];
+const SITES1=[{k:'A',y:2173,era:1,mon:2},{k:'B',y:2275,era:2,mon:4},{k:'C',y:1917,era:0,mon:0}];
+PZ[0]={
+  secretOn:L=>L.solved,
+  mount(L){
+    const as={};let sel=null,era=null;
+    const draw=()=>{
+      L.panel.innerHTML=`<div class="l1c-row">${SITES1.map((s,i)=>`<button class="l1c ${sel===i?'sel':''} ${as[i]!=null?'ok':''}" data-i="${i}" ${as[i]!=null?'disabled':''}><b>โบราณสถาน ${s.k}</b><span class="mi"></span><em>ราว พ.ศ. ${s.y}</em><small>${as[i]!=null?ERA[as[i]]+' ✓':sel===i?'เลือกแล้ว':'ยังไม่เลือก'}</small></button>`).join('')}</div>
+       <p class="l1hint">เลือกโบราณสถานและยุค แล้วกด ตกลง</p>
+       <div class="l1e-row">${ERA.map((e,k)=>`<button class="l1e ${era===k?'sel':''}" data-k="${k}" ${Object.values(as).includes(k)?'disabled':''}>${e}</button>`).join('')}</div>`;
+      $$('.l1c',L.panel).forEach(b=>{const i=+b.dataset.i;$('.mi',b).appendChild(canvasImg(monCanvas(SITES1[i].mon),'monimg'));b.onclick=()=>{Snd.sfx('click');sel=sel===i?null:i;draw()}});
+      $$('.l1e',L.panel).forEach(b=>b.onclick=()=>{Snd.sfx('click');era=era===+b.dataset.k?null:+b.dataset.k;draw()});
+      L.primary('ตกลง',confirm,sel==null||era==null)};
+    const confirm=()=>{
+      if(sel==null||era==null)return;const s=SITES1[sel];
+      if(s.era===era){as[sel]=era;L.good(`ถูกต้อง โบราณสถาน ${s.k} สร้างราว พ.ศ. ${s.y} อยู่ในช่วง ${ERAR[era]} จึงเป็น${ERA[era]}`);sel=null;era=null;draw();
+        if(Object.keys(as).length===3){L.done('จับคู่ครบทั้งสามแห่ง เจ้าอ่านปีและรูปทรงได้แม่นมาก');L.update()}}
+      else{L.err(`ยังไม่ถูก โบราณสถาน ${s.k} สร้างราว พ.ศ. ${s.y} ลองเทียบกับช่วงปีของแต่ละยุคที่ข้าเล่าไว้ (${ERA[0]} ${ERAR[0]} · ${ERA[1]} ${ERAR[1]} · ${ERA[2]} ${ERAR[2]})`);era=null;draw()}};
+    draw()}};
+
+/* ---------- 2 · decode glyphs with the notebook, then calculate ---------- */
+const CARDX=[866,942,1020,1097],NUMX=[731,796,862,927,993],NUMY=[557,618];
+const CODE2=[2,0,3,1],DIG2=[1,2,3,4]; // glyph index -> digit (as in the notebook), shown order = pyramid, swirl, knot, lotus -> 3142
+const KEY1=CODE2.map(g=>DIG2[g]).join(''),KEY2=String(2173+8-100);
+PZ[1]={
+  secretOn:L=>L.solved,
+  mount(L){
+    L.hideBoard();let step=1,ans='';
+    // live cards over the printed ones, in a new order
+    CODE2.forEach((g,k)=>{const c=L.add('l2card',[CARDX[k],370,70,72]);c.innerHTML=`<img alt="" src="${spriteOf(L,[CARDX[g],370,70,72])}">`});
+    const note=L.patchT([326,583,328,50],'light','ข้อมูลอ้างอิง : ปีที่สร้างวัดและจำนวนเจดีย์ราย<br>ให้ตรวจจากบทเรียนที่ศึกษาก่อนเล่น','l2note');
+    const res=L.patchT([868,489,215,42],'light','','l2res');
+    const stp=L.add('l2step',[690,444,180,22],'');
+    const show=()=>{res.innerHTML=`<b>${ans||''}</b>`;stp.textContent=step===1?'ขั้นที่ 1 · ถอดรหัส':'ขั้นที่ 2 · คำนวณ'};
+    for(let d=0;d<10;d++)L.btn('k'+d,[NUMX[d%5],NUMY[d<5?0:1],54,50],String(d),()=>{if(ans.length<5)ans+=d;show()});
+    L.btn('del',[1090,489,58,44],'ลบ',()=>{ans=ans.slice(0,-1);show()},'l2del').innerHTML='<span>⌫ ลบ</span>';
+    L.btn('ok',[1080,557,150,113],'ยืนยัน',()=>{step===1?check1():check2()});
+    const check1=()=>{
+      if(ans.length!==4){L.err('รหัสชั้นแรกมี 4 ตัว ถอดสัญลักษณ์ทีละตัวตามตารางในสมุด แล้วเรียงตามลำดับที่เห็น');return}
+      for(let k=0;k<4;k++)if(+ans[k]!==DIG2[CODE2[k]]){L.err(`ตัวที่ ${k+1} ยังไม่ตรง ลองดูสัญลักษณ์ตัวที่ ${k+1} ในช่อง "รหัสที่ได้" แล้วหาเลขของมันในตารางด้านซ้าย`);ans='';show();return}
+      step=2;ans='';L.good('ถอดรหัสชั้นแรกสำเร็จ! ต่อไปคือชั้นที่สอง ใช้สูตรในสมุดกับข้อมูลที่เจ้าเรียนมา');show()};
+    const check2=()=>{
+      if(!ans){L.say('กรอกคำตอบก่อนนะ');return}const v=+ans;
+      if(v===+KEY2){show();L.done(`ถูกต้อง (${thNum(2173)} + 8) − 100 = ${KEY2} ตู้เหล็กเปิดแล้ว`);L.update();return}
+      let m='ผลลัพธ์ไม่ตรง ลองตรวจปีที่สร้างวัดและจำนวนเจดีย์รายจากบทเรียนอีกครั้ง';
+      if(v===2173+8)m='ยังไม่ได้ลบ 100 ตามสูตร';
+      else if(v===2173)m='ยังไม่ได้บวกจำนวนเจดีย์ราย แล้วลบ 100';
+      else if(v===2173-100)m='อย่าลืมบวกจำนวนเจดีย์รายก่อนลบ 100';
+      else if(v===2173+8+100)m='สูตรให้ลบ 100 ไม่ใช่บวก';
+      L.err(m);ans='';show()};
+    show();L.primary('')}};
+
+/* ---------- 3 · lost map: turn three rivers, place three places ---------- */
+const S3=[[805,260,78,68],[522,340,78,70],[890,375,78,68]];            // map slots: 0 north-middle, 1 west, 2 east
+const T3=[{id:'wat',n:'วัดสำคัญ',r:[1130,225,127,122],slot:1},{id:'fort',n:'ป้อมปราการ',r:[1130,357,127,110],slot:0},{id:'mkt',n:'ตลาดริมน้ำ',r:[1130,472,127,103],slot:2}];
+const RV3=[{n:'เจ้าพระยา',r:[792,490,96,26],d:0},{n:'ลพบุรี',r:[1005,262,86,26],d:3},{n:'ป่าสัก',r:[972,470,86,26],d:1}];
+PZ[2]={
+  secretOn:L=>L.st.riversOk,
+  mount(L){
+    L.hideBoard();L.st.riversOk=false;
+    const riv=RV3.map(r=>({n:r.n,d:r.d})),put={0:null,1:null,2:null};let sel=null;
+    L.patchT([88,186,280,82],'light',`<b>คำบรรยายภูมิศาสตร์</b><span>• ป้อมปราการ: ทางเหนือ ใกล้เมืองที่แม่น้ำลพบุรีไหลมา</span><span>• ตลาดริมน้ำ: ริมน้ำทางตะวันออก ใกล้ที่ป่าสักไหลมาบรรจบ</span><span>• วัดสำคัญ: ทางตะวันตก บนทางไปสุพรรณบุรี</span>`,'l3desc');
+    const prog=L.patchT([686,658,74,30],'dark','','l3prog');
+    const tag=RV3.map((q,i)=>L.btn('rv'+i,q.r,'หมุนทิศแม่น้ำ'+q.n,()=>{riv[i].d=(riv[i].d+1)%4;upd()},'rvtag'));
+    const slot=S3.map((r,k)=>L.btn('sl'+k,r,'ช่องที่ '+(k+1),()=>{
+      if(put[k]!=null){put[k]=null;upd();return}
+      if(sel==null){L.say('เลือกสถานที่จากรายการด้านขวาก่อน แล้วค่อยแตะช่องบนแผนที่');return}
+      put[k]=sel;sel=null;upd()},'slot'));
+    const tok=T3.map((t,i)=>L.btn('tk'+i,t.r,t.n,()=>{if(Object.values(put).includes(i))return;sel=sel===i?null:i;upd()},'tok'));
+    const dim=T3.map(t=>L.add('dim',t.r));dim.forEach(d=>d.style.display='none');
+    const upd=()=>{
+      riv.forEach((r,i)=>{tag[i].innerHTML=`<span>${DIRS[r.d]} ${r.n}</span>`;tag[i].classList.toggle('good',r.d===2)});
+      S3.forEach((r,k)=>{slot[k].innerHTML=put[k]!=null?`<img alt="" src="${spriteOf(L,T3[put[k]].r)}">`:'';slot[k].classList.toggle('filled',put[k]!=null)});
+      T3.forEach((t,i)=>{const used=Object.values(put).includes(i);dim[i].style.display=used?'block':'none';tok[i].classList.toggle('sel',sel===i)});
+      const rOk=riv.filter(r=>r.d===2).length,pOk=S3.filter((_,k)=>put[k]!=null&&T3[put[k]].slot===k).length;
+      prog.innerHTML=`<b>${rOk+pOk} / 6</b>`;
+      if(rOk===3&&!L.st.riversOk){L.st.riversOk=true;L.good('แม่น้ำทั้งสามสายไหลลงใต้ถูกต้องแล้ว');L.update()}
+      L.primary('ตรวจสอบคำตอบ',check)};
+    const check=()=>{
+      const rOk=riv.every(r=>r.d===2),miss=[];
+      if(!rOk)miss.push('แม่น้ำ '+riv.filter(r=>r.d!==2).map(r=>r.n+' ชี้ไปทิศ'+DIRN[r.d]).join(', ')+' (แม่น้ำสายหลักของที่ราบภาคกลางไหลจากเหนือลงใต้)');
+      const emp=S3.filter((_,k)=>put[k]==null).length;if(emp)miss.push('ยังวางสถานที่ไม่ครบ');
+      S3.forEach((_,k)=>{if(put[k]!=null&&T3[put[k]].slot!==k)miss.push(`${T3[put[k]].n}ไม่ควรอยู่ช่องนั้น`)});
+      if(!miss.length){L.done('แผนที่สมบูรณ์ ทั้งแม่น้ำและสถานที่ถูกต้องครบ');L.update();return}
+      const onlyEmpty=rOk&&miss.length===1&&emp;
+      if(onlyEmpty)L.say('ยังเหลือช่องว่างบนแผนที่ วางสถานที่ให้ครบก่อนนะ');else L.err(miss.join(' · '))};
+    L.say('ปรับทิศแม่น้ำ (แตะป้ายลูกศร) แล้ววางสถานที่ตามคำบรรยาย (แตะการ์ดด้านขวา แล้วแตะช่องบนแผนที่)');
+    upd()}};
+
+/* ---------- 4 · trade crisis: choose how much to put in each goods type ---------- */
+const BARS4=[[638,359,154,30],[835,359,154,30],[1028,359,154,30]];
+const RT4=[.10,.05,-.20],CL4=['#7ee060','#ffd23a','#ff7a62'],UNIT=50;
+const NEWS4=['อีก 2 รอบ ข่าวฤดูน้ำหลาก: น้ำจะท่วมทุ่ง ข้าวเสียหาย และเรือขนผ้าจากต่างเมืองจะติดขัด','อีก 1 รอบ น้ำหลากจะมาถึงตลาด สินค้าสามัญจะเสียหายได้ ควรเตรียมรับมือ','น้ำหลากมาถึงแล้ว! ข้าวเสียหายและเรือขนผ้าติดขัด สินค้าสามัญขาดทุนในรอบนี้','น้ำลดแล้ว ท่าเรือกลับมาใช้ได้ตามปกติ ตลาดเริ่มคึกคัก','ไม่มีข่าวพิเศษ ตลาดเป็นปกติ','รอบสุดท้ายก่อนปิดบัญชี ไม่มีข่าวพิเศษ'];
+PZ[3]={
+  secretOn:L=>L.solved&&L.mist===0,
+  mount(L){
+    L.hideBoard();let coins=520,r=0;const st=[0,0,0];const log=[];
+    const stake=()=>st.reduce((a,b)=>a+b,0)*UNIT;
+    const evt=L.patchT([648,458,218,92],'light','','l4evt');
+    const cash=L.patchT([1008,534,122,28],'dark','','l4cash');
+    const bars=BARS4.map((b,k)=>{const e=L.add('l4bar',b,'');e.style.background=colOf(L,b,'dark');
+      e.innerHTML=`<span style="color:${CL4[k]}">${RT4[k]>0?'+':'−'}${Math.abs(RT4[k]*100)}%</span><button class="cb" data-k="${k}" data-d="-1" aria-label="ลด">−</button><b>0</b><button class="cb" data-k="${k}" data-d="1" aria-label="เพิ่ม">+</button>`;return e});
+    bars.forEach((e,k)=>$$('.cb',e).forEach(b=>b.onclick=()=>{if(L.dead)return;const d=+b.dataset.d;
+      if(d>0&&stake()+UNIT>coins){L.say('ทุนไม่พอแล้ว (1 ครั้ง = '+UNIT+' เหรียญ)');return}
+      if(d<0&&st[k]<=0)return;Snd.sfx('click');st[k]+=d;upd()}));
+    const upd=()=>{
+      bars.forEach((e,k)=>{$('b',e).textContent=st[k];$$('.cb',e)[0].disabled=st[k]<=0;$$('.cb',e)[1].disabled=stake()+UNIT>coins});
+      evt.innerHTML=`<b>รอบที่ ${Math.min(r+1,6)}/6 · ใช้ทุน ${stake()} เหรียญ</b><span>${NEWS4[Math.min(r,5)]}</span>`;
+      cash.innerHTML=`<b>${coins} เหรียญ</b>`};
+    const confirm=()=>{
+      if(L.dead)return;const flood=r===2,rates=RT4.map((x,k)=>k===0&&flood?-.25:x);let d=0;const parts=[];
+      st.forEach((u,k)=>{if(u){const g=Math.round(u*UNIT*rates[k]);d+=g;parts.push(`${CATN[k]} ${g>=0?'+':''}${g}`)}});
+      coins+=d;let msg=parts.length?`รอบที่ ${r+1}: ${parts.join(' · ')} รวม ${d>=0?'+':''}${d} เหรียญ`:`รอบที่ ${r+1}: งดค้า เงินยังอยู่ครบ`;
+      let bad=false;
+      if(st[2]>0){msg+=' · สินค้าต้องห้ามผิดกฎหลวง ถูกริบและปรับ';bad=true}
+      if(flood&&st[0]>0){msg+=' · น้ำหลากทำให้สินค้าสามัญเสียหาย';bad=true}
+      st[0]=st[1]=st[2]=0;r++;
+      if(bad)L.err(msg);else{Snd.sfx('ok');L.say(msg)}
+      if(L.dead)return;
+      if(r>=6){upd();
+        if(coins>=800){L.done(`ปิดบัญชีได้ ${coins} เหรียญ ถึงเป้าหมาย`);L.update();L.primary('ผ่านด่าน',()=>finishLevel(L));return}
+        L.say(`ปิดบัญชีได้ ${coins} เหรียญ ยังไม่ถึงเป้า 800 เหรียญ`);L.lives=0;L.syncMist();setTimeout(()=>L.lose(),600);return}
+      upd()};
+    L.primary('ยืนยันการค้า',confirm);
+    L.say('เจ้าเป็นพ่อค้าริมน้ำ มีทุน 520 เหรียญ ต้องทำกำไรให้ถึง 800 เหรียญภายใน 6 รอบ กด + − เพื่อเลือกทุน (ครั้งละ '+UNIT+' เหรียญ) ในสินค้าแต่ละประเภท ข่าวจะมาก่อนเหตุการณ์ 2 รอบ อ่านให้ดี');
+    upd()}};
+
+/* ---------- texts that follow the new screens ---------- */
+LV[0].intro=['ยินดีต้อนรับสู่วัดมหาธาตุ ข้าคือขุนอักษร ในบันทึกของนักโบราณคดีมีหลักฐานปีที่สร้างของโบราณสถานสามแห่ง จงจับคู่แต่ละแห่งให้ตรงกับยุคสมัยของอยุธยา'];
+LV[0].hints=['เทียบปีที่สร้างกับช่วงปีของแต่ละยุค (ต้น 1893–1991 · กลาง 1991–2231 · ปลาย 2231–2310)','ปีน้อยที่สุดคือยุคต้น ปีมากที่สุดคือยุคปลาย','ถ้าสับสน ลองดูรูปทรงประกอบ ฐานกว้างและยอดทรงระฆังมักเป็นยุคปลาย'];
+LV[1].intro=['สมุดบันทึกเล่มนี้ถูกผนึกด้วยรหัสสองชั้น ชั้นแรกแปลงสัญลักษณ์ 4 ตัวเป็นเลขไทยตามตารางในสมุด ชั้นที่สองคำนวณตามสูตร ข้อมูลของวัดให้ย้อนนึกถึงสิ่งที่เจ้าเพิ่งศึกษามา'];
+LV[1].hints=['ชั้นที่ 1: ดูสัญลักษณ์ตัวแรกในช่อง "รหัสที่ได้" แล้วหาเลขของมันในตารางทางซ้าย ทำทีละตัวตามลำดับ','ชั้นที่ 2: สูตรคือ (ปีที่สร้างวัด + จำนวนเจดีย์ราย) − 100','ปีที่สร้างวัดไชยวัฒนารามและจำนวนเจดีย์รายอยู่ในหน้าแรกของบทเรียน (พ.ศ. 2173 และ 8 องค์)'];
+LV[1].secret.hint='เมื่อรหัสถูกถอดสำเร็จ ลายน้ำจะปรากฏบนแท่นศิลา ข้างนักสำรวจฝั่งซ้ายของฉาก';
+LV[2].intro=['ช่วยวางตำแหน่งสถานที่สำคัญและปรับทิศทางแม่น้ำให้ถูกต้องตามคำบรรยายนะ'];
+LV[2].hints=['แม่น้ำสายหลักของที่ราบภาคกลางไหลไปทางทิศใด (เหนือขึ้นบนเสมอ)','ป้อมปราการอยู่ทางเหนือ ตลาดริมน้ำอยู่ทางตะวันออก','วัดสำคัญอยู่ทางตะวันตก บนทางไปสุพรรณบุรี'];
+LV[3].intro=['เจ้าเป็นพ่อค้าริมน้ำ มีทุน 520 เหรียญ ต้องทำกำไรให้ถึง 800 เหรียญภายใน 6 รอบ ข่าวจะมาก่อนเหตุการณ์ 2 รอบ อ่านให้ดี'];
+LV[3].hints=['สินค้าต้องห้ามขาดทุนและผิดกฎหลวง อย่าลงทุนเลย','ข่าวน้ำหลากมาก่อน 2 รอบ ในรอบที่น้ำมา สินค้าสามัญจะขาดทุน ให้ลงทุนสินค้าภาษีพิเศษแทนหรืองดค้า','สินค้าสามัญกำไรดีที่สุดในรอบปกติ ลงทุนให้เต็มที่ได้'];
+LV[3].secret.hint='ถ้าเจ้าบริหารการค้าจนถึงเป้าหมายโดยไม่พลาดแม้แต่ครั้งเดียว ท่าน้ำฝั่งซ้ายของฉากจะมีบางอย่างเปล่งประกาย';
 
 
 boot();
